@@ -1,0 +1,9 @@
+{
+  "name": "Node.js project",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "cacheFrom": "docker-study1"
+  },
+  "runArgs": ["--name", "docker-study1"],
+  "remoteUser": "node"
+}
