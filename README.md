@@ -33,6 +33,7 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
 </pre>
 
 ### Setup Next.js
+
 表示 → コマンドパレット → 開発コンテナー:コンテナーで再度開く
 
 <pre>
@@ -48,18 +49,23 @@ npx create-next-app
 ✔ What import alias would you like configured? … @/*
 </pre>
 
-Next.jsのインストールが完了したらnext-appフォルダに移動して、yarn devで開発サーバーを起動。
-※yarn以外にもnpmやpnpmなどがありますが各自のお好みで
+Next.js のインストールが完了したら next-app フォルダに移動して、yarn dev で開発サーバーを起動。
+※yarn 以外にも npm や pnpm などがありますが各自のお好みで
+
 ```
 cd next-app
 yarn dev
 ```
 
-http://localhost:3000にアクセスするとNext.jsのデフォルトページが表示されます。
+http://localhost:3000
 
-### 既にNext.jsがインストールされているプロジェクトをCloneした場合
-git cloneでローカルにソースコードをダウンロードしたらアプリケーションのフォルダを開き  
-yarn installで必要なパッケージをインストールする
+にアクセスすると Next.js のデフォルトページが表示されます。
+
+### 既に Next.js がインストールされているプロジェクトを Clone した場合
+
+git clone でローカルにソースコードをダウンロードしたらアプリケーションのフォルダを開き  
+yarn install で必要なパッケージをインストールする
+
 ```
 cd next-app
 yarn install
