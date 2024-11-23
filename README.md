@@ -21,6 +21,7 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
 </pre>
 
 ### docker-compose.yml
+
 <pre>
 version: '3.8'
 
@@ -44,8 +45,13 @@ services:
 <pre>
 {
   "name": "Node.js project",
-  "build": {
-    "dockerfile": "Dockerfile"
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
   },
   "remoteUser": "node"
 }
