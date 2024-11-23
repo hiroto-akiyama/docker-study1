@@ -1,9 +1,12 @@
 {
   "name": "Node.js project",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "cacheFrom": "docker-study1"
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
   },
-  "runArgs": ["--name", "docker-study1"],
   "remoteUser": "node"
 }

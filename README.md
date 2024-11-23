@@ -20,6 +20,25 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 </pre>
 
+### docker-compose.yml
+<pre>
+version: '3.8'
+
+services:
+  app: # コンテナごとにdocker-compose内名前を付ける
+    build: . # Dockerfileのパスを指定
+    container_name: next-app # コンテナの名前を付ける
+    # ttyとstdin_openはコンテナを起動させておくための設定
+    tty: true 
+    stdin_open: true
+    # WSLとコンテナのフォルダの共有設定
+    volumes:
+      - ../:/workspace:cached
+    # このコンテナにアクセスするポート番号のマッピング
+    ports:
+      - '3000:3000'
+</pre>
+
 ### devcontainer.js
 
 <pre>
